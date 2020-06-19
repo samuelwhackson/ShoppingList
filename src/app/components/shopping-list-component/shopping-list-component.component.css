@@ -1,0 +1,84 @@
+
+
+.item-selected {
+  background: lightblue!important;
+  color: black !important;
+}
+ul > li
+{
+   list-style-type: none;
+   background-color: white;
+   color: black;
+   border: 1px solid white;
+   height: 40px;
+   text-align:center;
+   padding-top: 20px;
+   border-radius: 5px;
+   margin: 10px 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+  margin: auto;
+  padding: 10px;
+
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr 1fr 1.8fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". leftDiv centerDiv rightDiv ." ". leftDiv centerDiv rightDiv ." ". leftDiv centerDiv rightDiv .";
+  height: 600px;
+}
+
+.leftDiv {
+  padding: 50px ;
+  grid-area: leftDiv;
+  align-items: center;
+}
+
+.rightDiv {
+   padding: 50px ;
+   grid-area: rightDiv;
+}
+
+.centerDiv {
+  grid-area: centerDiv;
+
+  display : inline;
+  position: relative;
+
+  }
+
+  .topButtons{
+    margin-left: 24%;
+    margin-top: 50%;
+    margin-bottom: 20%;
+  }
+  .bottomButtons{
+    margin-left: 24%;
+  }
+
+.shoppingList{
+  overflow-y: scroll;
+  height:100%;
+  overflow: hidden;
+  background: #3333;
+  border-radius: 10px;
+}
+
+
+button{
+  height: 64px;
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+ }
+
+#upButton{background: url(GUIElements\arrowUp.png)}
+#downButton{background: url(GUIElements\arrowDown.png)}
+#rightButton{background: url(GUIElements\arrowRight.png)}
+#leftButton{background: url(GUIElements\arrowLeft.png)}

@@ -1,1 +1,43 @@
-<p>shopping-list-component works!</p>
+<div class="grid-container">
+  <div class="leftDiv">
+<p>Current List</p>
+  <div class="shoppingList">
+    <ul >
+      <li
+       [class.item-selected]="item.selected"
+       (click)="toggleSelected(item, 2)" *ngFor="let item of list2">
+
+        {{item.ItemName}}
+
+      </li>
+    </ul>
+  </div>
+
+  </div>
+  <div class="rightDiv">
+    <p>Previous List</p>
+    <div class="shoppingList">
+
+      <ul >
+        <li
+         [class.item-selected]="item.selected"
+         (click)="toggleSelected(item, 1)" *ngFor="let item of list1">
+
+          {{item.ItemName}}
+
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="centerDiv">
+    <div class="topButtons">
+      <button class="indexButton" id ="leftButton"(click)="moveSelected('left')" type="button" name="button"></button>
+      <button class="indexButton" id ="rightButton"(click)="moveSelected('right')"type="button" name="button"></button>
+  </div>
+  <div class="bottomButtons">
+      <button class="indexButton" id ="upButton" (click)="moveSelected('up')" type="button" name="button"></button>
+      <button class="indexButton" id="downButton"(click)="moveSelected('down')"type="button" name="button"></button>
+  </div>
+  </div>
+</div>
